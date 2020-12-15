@@ -13,7 +13,7 @@ class FlaskTests(unittest.TestCase):
 			'sentence': 'The media and establishment want me out of the race so badly -  I WILL NEVER DROP OUT OF THE RACE, WILL NEVER LET MY SUPPORTERS DOWN! #MAGA',
 			'form_type': 'get_tweets'
 		}
-		response = requests.post('http://0.0.0.0:8050/', data=parameters)
+		responce = requests.post('http://0.0.0.0:8050/', data=parameters)
 		self.assertEqual(responce.status_code, 200)
 
 if __name__ == '__main__':
