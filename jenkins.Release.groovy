@@ -8,10 +8,11 @@ def down_app(){
 }
 
 def release_app(){
+  input "Do you allow pushing it into production"
 }
 
 def live_app(){
-  echo 'Ready to be deploy on live'
+  echo 'Deploying into production'
 }
 
 return this
