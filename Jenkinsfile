@@ -7,7 +7,7 @@ pipeline {
       steps {
         script {
           def filename = 'Jenkins.' + env.BRANCH_NAME + '.groovy'
-				  groovyfile = load filename
+		  groovyfile = load filename
         }
       }
     }
