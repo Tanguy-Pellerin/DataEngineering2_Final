@@ -7,7 +7,7 @@ pipeline {
       steps {
         script {
           def filename = 'Jenkins.' + env.BRANCH_NAME + '.groovy'
-		  groovyfile = load filename
+		      groovyfile = load filename
         }
       }
     }
@@ -39,6 +39,7 @@ pipeline {
     stage('Merging to release') {
       script {
         groovyfile.release_app()
+      }
     }
   }
 }
