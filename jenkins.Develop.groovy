@@ -7,7 +7,7 @@ def test_app(){
 }
 
 def down_app(){
-  sh 'docker-compose down'
+  sh 'docker compose down'
 }
 
 def release_app(){
