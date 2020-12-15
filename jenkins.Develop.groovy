@@ -14,7 +14,5 @@ def release_app(){
   echo 'Ready to be merge to release'
 }
 
-def live_app(){
-}
 
 return this
