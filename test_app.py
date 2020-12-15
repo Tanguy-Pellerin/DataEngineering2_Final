@@ -5,7 +5,7 @@ import requests
 class FlaskTests(unittest.TestCase):
 	
 	def test_a_index(self):
-		responce = requests.get('http://0.0.0.0:5000/')
+		responce = requests.get('http://0.0.0.0:8050/')
 		self.assertEqual(responce.status_code, 200)
 """
 	def setUp(self):
