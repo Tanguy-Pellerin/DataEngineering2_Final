@@ -1,0 +1,8 @@
+flask
+redis
+prometheus-client
+pandas
+numpy
+regex
+gensim
+nltk
