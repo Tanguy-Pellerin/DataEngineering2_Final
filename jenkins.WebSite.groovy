@@ -11,7 +11,7 @@ def down_app(){
 }
 
 def release_app(){
-  echo 'Ready to be merged to release'
+  echo 'Ready to be merged to develop'
 }
 
 def live_app(){
