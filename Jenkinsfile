@@ -37,8 +37,10 @@ pipeline {
     }
     
     stage('Merging to release') {
+	   steps {	    
       script {
         groovyfile.release_app()
+     		}
       }
     }
   }
