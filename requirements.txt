@@ -1,9 +1,0 @@
-flask
-redis
-prometheus-client
-FastText
-gensim
-Pandas
-numpy
-tweet-preprocessor
-nltk
