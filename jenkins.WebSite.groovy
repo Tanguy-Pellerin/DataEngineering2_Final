@@ -7,11 +7,11 @@ def test_app(){
 }
 
 def down_app(){
-  sh 'docker-compose down'
+  sh 'docker compose down'
 }
 
 def release_app(){
-  echo 'Ready to be merge to release'
+  echo 'Ready to be merged to release'
 }
 
 def live_app(){
