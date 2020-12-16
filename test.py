@@ -1,3 +1,4 @@
+import logging
 from locust import HttpUser, task, between, events
 
 
