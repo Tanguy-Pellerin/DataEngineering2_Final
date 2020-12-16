@@ -4,7 +4,6 @@ def build_app(){
 
 def test_app(){
   sh 'locust -f test.py -u 1000 -r 20 -H http://0.0.0.0:8050/ -t 1m --headless'
-  sh 'bash verification.bash'
 }
 
 def down_app(){
