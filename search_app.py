@@ -78,7 +78,7 @@ def train_model():
 
 	modeldoc2vec = Doc2Vec(tag_words, vector_size=20, window=5, min_count=1, workers=-1, epochs = 20)
 
-	print('Storing model to redis...')
+	#print('Storing model to redis...')
 
 	pickle_model = pickle.dump(modeldoc2vec, open('ML/Doc2VecModelFinal.pkl','wb'))
 	"""
@@ -110,6 +110,7 @@ def get_tweet(df,model, sentence):
 	#print(tweet_similar)
 	#return tweet_similar
 	sent = tweet_similar
+	INPROGRESS.dec()
 	return render_template('index.html', result=sent)
 
 def get_tweet_only(df, model, sentence):
@@ -119,6 +120,7 @@ def get_tweet_only(df, model, sentence):
 		only_tweet_similar.append(df.text[elem[0]])
 	#print(tweet_similar)
 	sent = only_tweet_similar
+	INPROGRESS.dec()
 	return render_template('index.html', result=sent)
 
 
