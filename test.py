@@ -7,7 +7,7 @@ class WebsiteTestUser(HttpUser):
         self.client.get("/")
 """
     def get_tweet(self):
-    	self.client.post("http://0.0.0.0:5000/form_type", json={
+    	self.client.post("http://0.0.0.0:8050/form_type", json={
     		'sentence': 'The media and establishment want me out of the race so badly -  I WILL NEVER DROP OUT OF THE RACE, WILL NEVER LET MY SUPPORTERS DOWN! #MAGA',
     		})
 """
