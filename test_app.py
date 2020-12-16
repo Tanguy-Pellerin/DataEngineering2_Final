@@ -1,6 +1,7 @@
 import unittest
 import os
 import requests
+import time
 
 class FlaskTests(unittest.TestCase):
 	
@@ -17,7 +18,7 @@ class FlaskTests(unittest.TestCase):
 		self.assertEqual(responce.status_code, 200)
 
 if __name__ == '__main__':
-	sleep(1)
+	time.sleep(1)
 	unittest.main()		
 
 
