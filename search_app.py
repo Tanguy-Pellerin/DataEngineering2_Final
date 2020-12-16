@@ -159,3 +159,4 @@ if __name__ == '__main__':
 	nltk.download('stopwords')
 	redis_client = StrictRedis(host='redis', port=6379)
 	app.run(host='0.0.0.0')
+
