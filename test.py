@@ -16,10 +16,3 @@ def _(environment, **kw):
         environment.process_exit_code = 1
     else:
         environment.process_exit_code = 0
-
-"""
-    def get_tweet(self):
-    	self.client.post("http://0.0.0.0:8050/form_type", json={
-    		'sentence': 'The media and establishment want me out of the race so badly -  I WILL NEVER DROP OUT OF THE RACE, WILL NEVER LET MY SUPPORTERS DOWN! #MAGA',
-    		})
-"""
