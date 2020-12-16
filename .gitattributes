@@ -1,0 +1,5 @@
+jenkins.Develop.groovy merge=ours
+jenkins.WebSite.groovy merge=ours
+jenkins.Release.groovy merge=ours
+test.py merge=ours
+test_app.py merge=ours
