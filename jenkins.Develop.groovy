@@ -3,7 +3,7 @@ def build_app(){
 }
 
 def test_app(){
-  sh 'python test_stress_app.py'
+  sh 'locust -f test.py -u 1000 -r 20 -H http://0.0.0.0:5000/ -t 1m --headless'
 }
 
 def down_app(){
