@@ -1,0 +1,57 @@
+groups:
+  - name: 'Alert InstanceDown'
+    rules:
+      - alert: InstanceDown
+        expr: up == 0
+        for: 2s
+      - alert: SearchAppIsDown
+        expr: up{instance="localhost:8050", job="Flask Redis Search Twitter App"} == 0
+        for: 2s
+
+      - alert: PrometheusNotConnectedToAlertmanager
+        expr: net_conntrack_dialer_conn_failed_total{dialer_name="alertmanager",reason="refused"} > 1
+        for: 5s
+        labels: 
+            severity: critical
+
+      - alert: ApplicationException
+        expr: flask_redis_search_twitter_app_exceptions_total >= 1
+        for: 5s
+        labels: 
+            severity: critical
+
+      - alert: AlertWhenAverageRequestTooktolong
+        expr: flask_redis_search_twitter_app_latency_seconds_sum / flask_redis_search_twitter_app_latency_seconds_count > 0.75
+        for: 5s
+        labels: 
+            severity: critical
+
+      - alert: HostHighCpuLoad
+        expr: 100 - (avg(rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+
+      - alert: DiskSpace10percentFree
+        expr: (node_filesystem_avail_bytes / node_filesystem_size_bytes * 100) > 90
+        for: 5s
+        labels:
+          severity: critical
+
+      - alert: HighMemoryUsage
+        expr: (process_virtual_memory_bytes{job="Flask Redis Search Twitter App"}) > 7000000000 
+        for: 5s
+        labels:
+          severity: critical
+    
+
+     
+
+      
+
+
+
+
+
+
