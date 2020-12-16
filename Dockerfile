@@ -11,6 +11,6 @@ RUN pip install -r requirements.txt
 COPY . .
 
 EXPOSE 5000
-EXPOSE 8010
+EXPOSE 8050
 
-CMD ["python", "search_app.py"]
+CMD ["python","search_app.py"]
