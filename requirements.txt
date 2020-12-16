@@ -1,9 +1,8 @@
 flask
 redis
 prometheus-client
-FastText
-gensim
-Pandas
+pandas
 numpy
-tweet-preprocessor
+regex
+gensim
 nltk

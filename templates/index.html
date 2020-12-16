@@ -1,26 +1,34 @@
 <HTML>
 <BODY style="background-color:#5DADE2;">
-<form method="POST" action="">
+  <form method="POST" action="">
     <center>
-    <H1 style="font-family: Verdana;margin-bottom: 30px;">Add Some words </H1> <br>
-    <span style= "margin-bottom: 30px;">Put your search string</span><br>
-    <input type = "text" name = "sentence" placeholder="Enter some words!"style="height:100px;width:400px;font-size:14pt;margin-top: 30px;margin-bottom:30px;"/> <br>
-    <input type="hidden" name="form_type" value="function_search"/>
-    <input style= "margin-bottom: 30px;" type = "submit" value="Search">
+      <H1 style="font-family: Verdana;margin-bottom: 30px;">Add Some words </H1> <br>
+      <span style= "margin-bottom: 30px;">Put your search string</span><br>
+      <input type = "text" name = "sentence" placeholder="Enter some words!"style="height:100px;width:400px;font-size:14pt;margin-top: 30px;margin-bottom:30px;"/> <br>
+      <input type="hidden" name="form_type" value="get_tweets"/>
+      <input style= "margin-bottom: 30px;" type = "submit" value="Search">
     </center>
-</form>
-   <center>
-   	<h3>Results</h3>
-	<ol>
-    
-{% for item in tweets %}
-	{% for id, text in item %}
-	<li>{{ id }} : {{ text }} </li>
-	{% endfor %}
-{% endfor %}
-</ol>
+  </form>
 
-   </center>
+  <center>
+    <h3>Top 20 similar tweets to the search string</h3>
 
-</BODY>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="1">Table of Tweets</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for value in result %}
+      <tr>
+          <td> {{ value }} </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+
+    </center>
+
+  </BODY>
 </HTML>
